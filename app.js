@@ -67,9 +67,9 @@ d3.csv("data.csv")
     .attr("cx", d => xScale(d.poverty))
     .attr("cy", d => yScale(d.smokes))
     .attr("r", "15")
-    .classed("stateCircle", true);
+    .classed("stateCircle", true) 
 
-    var lablesGroup = chartGroup.selectAll("text")
+    chartGroup.append("g").selectAll("text")
     .data(stateData)
     .enter()
     .append("text")
